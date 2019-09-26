@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <script src="./bundle.js"></script>
+  <title>EF Browser Render</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+
+<div class="markdownit">
+<h1>Getting to know Solver</h1>
+          
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+
+<!--
+<div id="jquery-svg" data-file="solverbox.svg" data-attribute-selector="#svg-highlight-annotations"></div>
+-->
+
+<object class="svg-highlight" id="solver-overview" type="image/svg+xml" data="solverbox.svg"
+	data-attribute-selector="#svg-highlight-annotations">
+  <img src="solverbox.png" />
+</object>
+
+</div>
+
+<div class="col-md-6">
+  <dl id="svg-highlight-annotations">
+    <dt id="set-objective-box">Objective Cell</dt>
+    <dd>Enter a cell reference or name for the objective cell. The objective
+      cell must contain a formula. Select:
+      <ul>
+	<li><kbd>Max</kbd> if  you want the value of the objective cell to be as large as possible,</li>
+	<li><kbd>Min</kbd> if you want the value of the objective cell to be as small as possible,</li>
+	<li><kbd>Value of</kbd> if you want the value of the objective cell to reach a specific value.</li>
+      </ul>
+    </dd>
+    <dt id="variable-cells-box">Variable Cells</dt>
+    <dd>Enter a name or reference for each decision variable cell
+      range. Separate the non-adjacent references with commas. The
+      variable cells must be related directly or indirectly to the
+      objective cell. You can specify up to 200 variable cells.
+    </dd>
+    <dt id="constraints-box">Subject to the Constraints</dt>
+    <dd>
+      In the Subject to the Constraints box, enter any constraints that
+      you want to apply by doing the following:
+      <ul>
+	<li>In the **Solver Parameters dialog box**, click **Add**.</li>
+	<li>In the **Cell Reference** box, enter the cell reference or name of
+      the cell range for which you want to constrain the value.</li>
+	<li>Click the relationship (`<=`, `=`, `>=`, `int`, `bin`, or `dif`)
+    that you want between the referenced cell and the constraint.</li>
+	<li>If you choose `int`, `bin`, or `dif` then "integers", "binary", or
+	  "alldifferent" will appear in the Constraint Box, respectively.</li>
+	<li>If you choose `<=`, `=`, or `>=` for the relationship in the Constraint box, type a number, a cell refernce or name, or a formula.</li>
+      </ul>
+      
+      Do one of the following:
+      <ul>
+	<li>To accept the constraint and add another, click "Add".</li>
+	<li>To accept the constraint and return to the Solver Parameters
+	  dialog box, click "OK".</li>
+	</ul>
+    </dd>
+  </dl>
+</div>
+
+</div> <!-- row -->
+</div> <!-- container -->
+</div>
+</body>
+</html>
