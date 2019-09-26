@@ -1,0 +1,23 @@
+{
+  "name": "svg_highlight",
+  "version": "1.0.0",
+  "description": "Simple interactivity between SVG elements and DOM elements",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "watch": "watchify index.js -o public/bundle.js --debug --verbose -t [ babelify ]"
+  },
+  "keywords": [
+    "svg",
+    "dom"
+  ],
+  "author": "Darren K. Maczka",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "babelify": "^10.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  }
+}
