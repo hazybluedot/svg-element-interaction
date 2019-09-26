@@ -1,23 +1,25 @@
 {
-  "name": "svg_highlight",
+  "name": "svg-attach",
   "version": "1.0.0",
   "description": "Simple interactivity between SVG elements and DOM elements",
-  "main": "index.js",
+  "main": "lib/attachSvg.js",
+  "browserslist": "> 0.25%, not dead",
   "scripts": {
     "test": "test",
-    "watch": "watchify index.js -o public/bundle.js --debug --verbose -t [ babelify ]"
+    "build": "browserify index.js -t [ babelify --presets [ @babel/preset-env ] ] | uglifyjs > public/bundle.min.js",
+    "watch": "watchify index.js -o public/bundle.js --debug --verbose -t [ babelify --presets [ @babel/preset-env ] ]"
   },
   "keywords": [
     "svg",
     "dom"
   ],
   "author": "Darren K. Maczka",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "babelify": "^10.0.0",
-    "chai": "^4.2.0",
-    "mocha": "^6.2.0"
+    "browserify": "^16.5.0",
+    "uglify-js": "^3.6.0"
   }
 }
